@@ -1,13 +1,35 @@
+import {
+  getProjects,
+  setProjects,
+  ensureProjectsLoaded,
+} from "./js/dataStore.js";
+import {
+  normalizeStatus,
+  getStatusDisplayName,
+  badgeClass,
+} from "./js/utils/status.js";
+
 // Global variables for filter state
-var currentFilter = null; // null = all projects, or specific status
-var selectedTeamMembers = []; // Array of selected team member names
-var currentSearchTerm = "";
-var projects = [];
+let currentFilter = null; // null = all projects, or specific status
+let selectedTeamMembers = []; // Array of selected team member names
+let currentSearchTerm = "";
+let projects = [];
+
+// Initialize projects immediately since data is now embedded
+projects = getProjects();
+console.log("App initialized with projects:", projects.length);
+console.log(
+  "First project:",
+  projects[0] ? projects[0].name : "No projects found"
+);
+
+// Expose initial dataset for legacy functions that read from window scope
+window.projects = projects;
 
 // Navigation state
-var filterHistory = [];
-var savedFilters = [];
-var currentPage = "dashboard";
+let filterHistory = [];
+let savedFilters = [];
+let currentPage = "dashboard";
 
 (function () {
   function es(s) {
@@ -24,53 +46,23 @@ var currentPage = "dashboard";
   // Team member dropdown state
   var teamDropdownOpen = false;
 
-  function badgeClass(s) {
-    s = lc(s);
-    if (s === "active") return "green";
-    if (s === "in progress" || s === "inprogress" || s === "progress")
-      return "blue";
-    if (s === "blocked") return "red";
-    if (s === "on hold" || s === "onhold" || s === "hold") return "amber";
-    if (s === "archived" || s === "closed" || s === "done") return "gray";
-    return "blue";
-  }
-
-  function normalizeStatus(s) {
-    s = lc(s);
-    if (s === "inprogress" || s === "progress" || s === "in progress")
-      return "progress";
-    else if (s === "onhold" || s === "hold" || s === "on hold") return "hold";
-    else if (s === "blocked") return "blocked";
-    else if (s === "active") return "active";
-    else return "other";
-  }
-
-  function getStatusDisplayName(status) {
-    switch (status) {
-      case "active":
-        return "Active";
-      case "progress":
-        return "In Progress";
-      case "blocked":
-        return "Blocked";
-      case "hold":
-        return "On Hold";
-      case "other":
-        return "Other";
-      default:
-        return "All";
-    }
-  }
-
   function updateDisplay() {
+    console.log("updateDisplay called, projects.length:", projects.length);
     var filteredProjects = currentFilter
       ? projects.filter(function (p) {
           return normalizeStatus(p.status) === currentFilter;
         })
       : projects;
 
+    console.log("Filtered projects:", filteredProjects.length);
+
     // Update card count
-    activeSummary.textContent = filteredProjects.length;
+    if (activeSummary) {
+      activeSummary.textContent = filteredProjects.length;
+      console.log("Updated activeSummary to:", filteredProjects.length);
+    } else {
+      console.error("activeSummary element not found!");
+    }
 
     // Update meta text based on filter status
     var metaEl = document.getElementById("projectsMeta");
@@ -491,6 +483,16 @@ var currentPage = "dashboard";
   }
 
   function renderProjectCards(projectsToRender) {
+    console.log(
+      "renderProjectCards called with:",
+      projectsToRender.length,
+      "projects"
+    );
+    if (!grid) {
+      console.error("Grid element not found!");
+      return;
+    }
+
     grid.innerHTML = "";
     var controlsSection = document.querySelector(".controls-section");
 
@@ -787,13 +789,10 @@ var currentPage = "dashboard";
     }
   }
 
-  /* Read Projects JSON */
-  var dataNode = document.getElementById("data");
-  var raw = dataNode ? dataNode.textContent || "[]" : "[]";
-  try {
-    projects = JSON.parse(raw);
-  } catch (e) {
-    projects = [];
+  /* Projects data is imported via ES module (see top of file). */
+  if (!Array.isArray(projects)) {
+    projects = setProjects([]);
+    window.projects = projects;
   }
 
   /* DOM refs */
@@ -801,6 +800,15 @@ var currentPage = "dashboard";
   var empty = document.getElementById("empty");
   var mainCard = document.getElementById("mainCard");
   var activeSummary = document.getElementById("activeSummary");
+
+  // Check for critical DOM elements
+  if (!grid) {
+    console.error("Critical DOM element 'grid' not found!");
+    return;
+  }
+  if (!activeSummary) {
+    console.error("Critical DOM element 'activeSummary' not found!");
+  }
 
   // Status wheel arcs
   var activeArc = document.getElementById("activeArc");
@@ -1026,6 +1034,17 @@ var currentPage = "dashboard";
   });
 
   /* Initialize display */
+  console.log("Display initialization, projects loaded:", projects.length);
+
+  // Show debug info on page
+  if (projects.length > 0) {
+    console.log("✅ Projects loaded successfully:", projects.length);
+    document.title = "Projects (" + projects.length + " loaded)";
+  } else {
+    console.error("❌ No projects loaded!");
+    document.title = "Projects (ERROR: No data)";
+  }
+
   updateFilter();
 
   // Make functions globally accessible for external calls
@@ -1095,12 +1114,16 @@ function closeModal() {
   window.currentModalConfirm = null;
 }
 
+window.closeModal = closeModal;
+
 function confirmModal() {
   if (window.currentModalConfirm) {
     window.currentModalConfirm();
   }
   closeModal();
 }
+
+window.confirmModal = confirmModal;
 
 // Clear all filters function
 function clearAllFilters() {
@@ -1135,6 +1158,8 @@ function clearAllFilters() {
   // Show success toast
   showToast("Filters Cleared", "All filters have been reset", "success");
 }
+
+window.clearAllFilters = clearAllFilters;
 
 // Enhanced keyboard navigation
 document.addEventListener("keydown", function (e) {
@@ -1464,6 +1489,8 @@ function closeAdvancedSearch() {
   modal.classList.remove("show");
 }
 
+window.closeAdvancedSearch = closeAdvancedSearch;
+
 function initializeAdvancedSearch() {
   // Tab switching
   document.querySelectorAll(".search-tab").forEach((tab) => {
@@ -1527,6 +1554,8 @@ function clearAdvancedSearch() {
     });
 }
 
+window.clearAdvancedSearch = clearAdvancedSearch;
+
 function applyAdvancedSearch() {
   const searchText = document.getElementById("advancedSearchText").value;
 
@@ -1548,6 +1577,8 @@ function applyAdvancedSearch() {
   );
   updateBreadcrumb("dashboard", "Advanced Search Results");
 }
+
+window.applyAdvancedSearch = applyAdvancedSearch;
 
 function saveCurrentFilter() {
   const filterName = prompt("Enter a name for this filter:");
@@ -1571,6 +1602,8 @@ function saveCurrentFilter() {
     );
   }
 }
+
+window.saveCurrentFilter = saveCurrentFilter;
 
 // Filter History Functions
 function saveFilterToHistory() {
@@ -1962,31 +1995,23 @@ document.addEventListener("DOMContentLoaded", function () {
   function loadProjectsForAnalytics() {
     console.log("Loading projects for analytics...");
 
-    // First, try to use existing projects array
-    if (window.projects && window.projects.length > 0) {
-      projects = window.projects;
+    if (Array.isArray(projects) && projects.length > 0) {
+      window.projects = projects;
+      console.log("Using imported projects array:", projects.length);
+      updateAnalyticsData();
+      return;
+    }
+
+    if (Array.isArray(window.projects) && window.projects.length > 0) {
+      projects = setProjects(window.projects);
+      window.projects = projects;
       console.log("Using existing projects array:", projects.length);
       updateAnalyticsData();
       return;
     }
 
-    // Try to get projects from the data script element
-    const dataScript = document.getElementById("data");
-    if (dataScript) {
-      try {
-        const jsonData = JSON.parse(dataScript.textContent);
-        projects = jsonData;
-        window.projects = projects; // Store globally for reuse
-        console.log("Loaded projects from data script:", projects.length);
-        updateAnalyticsData(); // Retry now that we have data
-      } catch (e) {
-        console.error("Failed to parse project data:", e);
-        showFallbackAnalytics();
-      }
-    } else {
-      console.warn("No data script found, showing fallback analytics");
-      showFallbackAnalytics();
-    }
+    console.warn("No project data available, showing fallback analytics");
+    showFallbackAnalytics();
   }
 
   function showFallbackAnalytics() {

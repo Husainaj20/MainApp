@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Data Test</title>
+  </head>
+  <body>
+    <h1>Testing Data Loading</h1>
+    <div id="result">Loading...</div>
+
+    <script type="module">
+      import { getProjects } from "./js/dataStore.js";
+
+      const projects = getProjects();
+      const resultDiv = document.getElementById("result");
+
+      if (projects.length > 0) {
+        resultDiv.innerHTML = `
+                <p>✅ Success! Loaded ${projects.length} projects:</p>
+                <ul>
+                    ${projects
+                      .map((p) => `<li>${p.name} - ${p.status}</li>`)
+                      .join("")}
+                </ul>
+            `;
+      } else {
+        resultDiv.innerHTML = "❌ Error: No projects loaded";
+      }
+
+      console.log("Projects:", projects);
+    </script>
+  </body>
+</html>
