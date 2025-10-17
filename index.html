@@ -1,0 +1,1700 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Projects</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="header">
+      <div class="header-inner">
+        <div class="brand">
+          <svg
+            class="brand-icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"
+              stroke="var(--blue)"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <span>CA DOT Dashboard</span>
+        </div>
+
+        <nav class="nav-menu" role="navigation" aria-label="Main navigation">
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="#" class="nav-link active" data-page="overview">
+                <svg
+                  class="nav-icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect
+                    x="3"
+                    y="3"
+                    width="18"
+                    height="18"
+                    rx="2"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                  <rect x="7" y="7" width="3" height="3" fill="currentColor" />
+                  <rect x="14" y="7" width="3" height="3" fill="currentColor" />
+                  <rect
+                    x="7"
+                    y="14"
+                    width="10"
+                    height="3"
+                    fill="currentColor"
+                  />
+                </svg>
+                Overview
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link" data-page="analytics">
+                <svg
+                  class="nav-icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9 17H7v-7h2v7zM13 17h-2V7h2v10zM17 17h-2v-4h2v4z"
+                    fill="currentColor"
+                  />
+                  <path
+                    d="M3 3v16a2 2 0 0 0 2 2h16"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                </svg>
+                Analytics
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link" data-page="team">
+                <svg
+                  class="nav-icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                  <circle
+                    cx="9"
+                    cy="7"
+                    r="4"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                </svg>
+                Team
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link" data-page="settings">
+                <svg
+                  class="nav-icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle
+                    cx="12"
+                    cy="12"
+                    r="3"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1 1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                </svg>
+                Settings
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="header-actions">
+          <button
+            class="action-btn search-trigger"
+            id="searchBtn"
+            aria-label="Open advanced search"
+            title="Advanced Search"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="11"
+                cy="11"
+                r="8"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+              <path
+                d="m21 21-4.35-4.35"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+            </svg>
+          </button>
+          <button
+            class="action-btn"
+            id="notificationsBtn"
+            aria-label="View notifications"
+            title="Notifications"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+              <path
+                d="M13.73 21a2 2 0 0 1-3.46 0"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+            </svg>
+            <span class="notification-badge">3</span>
+          </button>
+          <div class="profile-menu">
+            <button
+              class="profile-btn"
+              aria-label="User profile menu"
+              title="Profile"
+            >
+              <div class="profile-avatar">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                  <circle
+                    cx="12"
+                    cy="7"
+                    r="4"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                </svg>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content" class="container" role="main">
+      <!-- Breadcrumb Navigation -->
+      <nav class="breadcrumb" aria-label="Breadcrumb navigation">
+        <ol class="breadcrumb-list">
+          <li class="breadcrumb-item">
+            <a href="#" class="breadcrumb-link">
+              <svg
+                class="breadcrumb-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+                <polyline
+                  points="9,22 9,12 15,12 15,22"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+              </svg>
+              Home
+            </a>
+          </li>
+          <li class="breadcrumb-item">
+            <span class="breadcrumb-current" id="breadcrumbCurrent"
+              >Project Overview</span
+            >
+          </li>
+        </ol>
+
+        <!-- Filter Preset Navigation -->
+        <div class="filter-presets">
+          <button
+            class="preset-btn active"
+            data-preset="all"
+            title="Show all projects"
+          >
+            <span class="preset-dot"></span>
+            All Projects
+          </button>
+          <button
+            class="preset-btn"
+            data-preset="my-projects"
+            title="Show projects assigned to me"
+          >
+            <span class="preset-dot"></span>
+            My Projects
+          </button>
+          <button
+            class="preset-btn"
+            data-preset="overdue"
+            title="Show overdue projects"
+          >
+            <span class="preset-dot"></span>
+            Overdue
+          </button>
+          <button
+            class="preset-btn"
+            data-preset="this-quarter"
+            title="Show projects from this quarter"
+          >
+            <span class="preset-dot"></span>
+            This Quarter
+          </button>
+        </div>
+      </nav>
+
+      <!-- 🔹 Summary row: Projects + Tasks + Status side-by-side -->
+      <div class="summary-row">
+        <!-- All Projects Card -->
+        <div id="mainCard" class="main-card" style="display: flex">
+          <svg
+            class="icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M3 6a2 2 0 0 1 2-2h5l2 2h9a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6z"
+              fill="var(--blue)"
+              opacity="0.15"
+            />
+            <path
+              d="M3 6a2 2 0 0 1 2-2h5l2 2h9a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6z"
+              stroke="var(--blue)"
+              stroke-width="1.8"
+            />
+          </svg>
+
+          <div class="content">
+            <h2>Projects</h2>
+            <p id="activeSummary" class="count">0</p>
+            <div id="projectsMeta" class="meta" style="display: none"></div>
+          </div>
+
+          <!-- Status breakdown wheel -->
+          <svg class="status-wheel" viewBox="0 0 80 80">
+            <!-- Background circle -->
+            <circle class="bg-circle" />
+            <!-- Status arcs -->
+            <circle
+              id="activeArc"
+              class="active-arc"
+              stroke-dasharray="0 188"
+            />
+            <circle
+              id="progressArc"
+              class="progress-arc"
+              stroke-dasharray="0 188"
+            />
+            <circle
+              id="blockedArc"
+              class="blocked-arc"
+              stroke-dasharray="0 188"
+            />
+            <circle id="holdArc" class="hold-arc" stroke-dasharray="0 188" />
+            <circle id="otherArc" class="other-arc" stroke-dasharray="0 188" />
+          </svg>
+        </div>
+
+        <!-- Tasks Card -->
+        <div id="tasksCard" class="main-card" style="display: flex">
+          <svg
+            class="icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle cx="12" cy="12" r="9" fill="var(--blue)" opacity="0.15" />
+            <circle
+              cx="12"
+              cy="12"
+              r="9"
+              stroke="var(--blue)"
+              stroke-width="1.8"
+              fill="none"
+            />
+            <path
+              d="M8.5 12.2l2.2 2.2 4.8-5"
+              stroke="var(--blue)"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+
+          <div class="content">
+            <h2>Tasks</h2>
+            <p id="tasksSummary" class="count">0</p>
+            <div id="tasksMeta" class="meta">0 / 0 done</div>
+            <!-- Progress bar -->
+            <div class="progress">
+              <span id="tasksBar" style="width: 0%"></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recent Activity Card -->
+        <div id="activityCard" class="main-card" style="display: flex">
+          <svg
+            class="icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect
+              x="2"
+              y="3"
+              width="20"
+              height="18"
+              rx="3"
+              fill="var(--blue)"
+              opacity="0.15"
+            />
+            <rect
+              x="2"
+              y="3"
+              width="20"
+              height="18"
+              rx="3"
+              stroke="var(--blue)"
+              stroke-width="1.8"
+              fill="none"
+            />
+            <circle cx="6" cy="7.5" r="1.2" fill="var(--blue)" />
+            <path
+              d="M9 7.5h10"
+              stroke="var(--blue)"
+              stroke-width="1.8"
+              stroke-linecap="round"
+            />
+            <circle cx="6" cy="10.5" r="1.2" fill="var(--blue)" />
+            <path
+              d="M9 10.5h10"
+              stroke="var(--blue)"
+              stroke-width="1.8"
+              stroke-linecap="round"
+            />
+            <circle cx="6" cy="13.5" r="1.2" fill="var(--blue)" />
+            <path
+              d="M9 13.5h8"
+              stroke="var(--blue)"
+              stroke-width="1.8"
+              stroke-linecap="round"
+            />
+            <circle cx="6" cy="16.5" r="1.2" fill="var(--blue)" />
+            <path
+              d="M9 16.5h6"
+              stroke="var(--blue)"
+              stroke-width="1.8"
+              stroke-linecap="round"
+            />
+          </svg>
+
+          <div class="content">
+            <h2>Recent Activity</h2>
+            <div id="activityList" class="activity-list">
+              <!-- Activity items will be populated here -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Search and Filter Controls -->
+      <div class="controls-section">
+        <div class="search-bar">
+          <svg
+            class="search-icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          >
+            <circle
+              cx="11"
+              cy="11"
+              r="8"
+              stroke="var(--muted)"
+              stroke-width="2"
+            />
+            <path
+              d="m21 21-4.35-4.35"
+              stroke="var(--muted)"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+          </svg>
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Search projects..."
+            aria-label="Search projects by name, description, or status"
+            role="searchbox"
+            aria-describedby="searchHelp"
+          />
+          <button
+            id="clearSearch"
+            class="clear-btn"
+            style="display: none"
+            aria-label="Clear search"
+          >
+            ×
+          </button>
+          <div id="searchHelp" class="sr-only">
+            Search through all project names, descriptions, and status values
+          </div>
+        </div>
+
+        <div class="filter-buttons">
+          <select
+            id="statusFilter"
+            class="status-dropdown"
+            aria-label="Filter projects by status"
+            aria-describedby="statusHelp"
+          >
+            <option value="">All Projects</option>
+            <option value="active">Active</option>
+            <option value="progress">In Progress</option>
+            <option value="blocked">Blocked</option>
+            <option value="hold">On Hold</option>
+          </select>
+          <div id="statusHelp" class="sr-only">
+            Filter the project list by status type
+          </div>
+
+          <div class="team-dropdown-container">
+            <button
+              class="team-dropdown-trigger"
+              id="teamDropdownTrigger"
+              aria-expanded="false"
+              aria-haspopup="true"
+              aria-label="Filter by team members"
+            >
+              <span id="teamDropdownText">All Team Members</span>
+              <span class="team-count" id="teamCount" style="display: none"
+                >0</span
+              >
+            </button>
+            <div class="team-dropdown-menu" id="teamDropdownMenu" role="menu">
+              <div class="dropdown-search">
+                <input
+                  type="text"
+                  id="teamSearchInput"
+                  placeholder="Search team members..."
+                  aria-label="Search team members"
+                />
+              </div>
+              <div
+                id="teamOptionsContainer"
+                role="group"
+                aria-label="Team member selection"
+              >
+                <!-- Team member options will be populated by JavaScript -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 🔹 Project grid -->
+      <div id="grid" class="grid"></div>
+
+      <div id="empty" class="empty" style="display: none">
+        <div class="empty-state">
+          <svg
+            class="empty-state-icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M9 2H15C16.1046 2 17 2.89543 17 4V6H21C21.5523 6 22 6.44772 22 7C22 7.55228 21.5523 8 21 8H3C2.44772 8 2 7.55228 2 7C2 6.44772 2.44772 6 3 6H7V4C7 2.89543 7.89543 2 9 2Z"
+              fill="currentColor"
+              opacity="0.3"
+            />
+            <path
+              d="M4 10V19C4 20.1046 4.89543 21 6 21H18C19.1046 21 20 20.1046 20 19V10H4Z"
+              stroke="currentColor"
+              stroke-width="2"
+              fill="none"
+            />
+            <path
+              d="M10 14L14 18M14 14L10 18"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+          </svg>
+          <h3 class="empty-state-title">No projects found</h3>
+          <p class="empty-state-description">
+            We couldn't find any projects matching your search criteria. Try
+            adjusting your filters or search terms.
+          </p>
+          <button class="btn btn-primary" onclick="clearAllFilters()">
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="11"
+                cy="11"
+                r="8"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+              <path
+                d="m21 21-4.35-4.35"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+            </svg>
+            Clear All Filters
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <!-- Quick Action Toolbar -->
+    <div class="quick-actions" id="quickActions">
+      <button
+        class="quick-action-btn primary"
+        id="createProjectBtn"
+        title="Create New Project"
+      >
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <line
+            x1="12"
+            y1="5"
+            x2="12"
+            y2="19"
+            stroke="currentColor"
+            stroke-width="2"
+          />
+          <line
+            x1="5"
+            y1="12"
+            x2="19"
+            y2="12"
+            stroke="currentColor"
+            stroke-width="2"
+          />
+        </svg>
+        <span>New Project</span>
+      </button>
+
+      <div class="quick-action-group">
+        <button class="quick-action-btn" id="exportBtn" title="Export Data">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"
+              stroke="currentColor"
+              stroke-width="2"
+            />
+          </svg>
+        </button>
+
+        <button class="quick-action-btn" id="printBtn" title="Print View">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <polyline
+              points="6,9 6,2 18,2 18,9"
+              stroke="currentColor"
+              stroke-width="2"
+            />
+            <path
+              d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"
+              stroke="currentColor"
+              stroke-width="2"
+            />
+            <rect
+              x="6"
+              y="14"
+              width="12"
+              height="8"
+              stroke="currentColor"
+              stroke-width="2"
+            />
+          </svg>
+        </button>
+
+        <button
+          class="quick-action-btn"
+          id="advancedSearchBtn"
+          title="Advanced Search"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="11"
+              cy="11"
+              r="8"
+              stroke="currentColor"
+              stroke-width="2"
+            />
+            <path
+              d="M21 21l-4.35-4.35"
+              stroke="currentColor"
+              stroke-width="2"
+            />
+            <circle
+              cx="11"
+              cy="8"
+              r="2"
+              stroke="currentColor"
+              stroke-width="2"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Analytics View -->
+    <main
+      id="analytics-view"
+      class="view-container"
+      style="display: none"
+      role="main"
+    >
+      <div class="container">
+        <div class="page-header">
+          <div>
+            <h1 class="page-title">Analytics Dashboard</h1>
+            <p class="page-description">
+              Performance metrics and insights for all projects
+            </p>
+          </div>
+          <button class="btn btn-primary" onclick="refreshAnalytics()">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+              <path
+                d="M21 3v5h-5M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+              <path d="M8 16H3v5" stroke="currentColor" stroke-width="2" />
+            </svg>
+            Refresh Data
+          </button>
+        </div>
+
+        <!-- Key Metrics Row -->
+        <div class="analytics-metrics">
+          <div class="metric-card animate-fade-in">
+            <div class="metric-header">
+              <div class="metric-icon blue">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M3 6a2 2 0 0 1 2-2h5l2 2h9a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                </svg>
+              </div>
+              <h3>Total Projects</h3>
+            </div>
+            <div class="metric-value" data-value="6">0</div>
+            <div class="metric-trend positive">↗ +2 this month</div>
+          </div>
+
+          <div
+            class="metric-card animate-fade-in"
+            style="animation-delay: 0.1s"
+          >
+            <div class="metric-header">
+              <div class="metric-icon green">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle
+                    cx="12"
+                    cy="12"
+                    r="10"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                  <polyline
+                    points="10,12 14,16 18,10"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                </svg>
+              </div>
+              <h3>Active Projects</h3>
+            </div>
+            <div class="metric-value" data-value="3">0</div>
+            <div class="metric-trend positive">↗ +1 this week</div>
+          </div>
+
+          <div
+            class="metric-card animate-fade-in"
+            style="animation-delay: 0.2s"
+          >
+            <div class="metric-header">
+              <div class="metric-icon orange">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle
+                    cx="12"
+                    cy="12"
+                    r="10"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M12 6v6l4 2"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                </svg>
+              </div>
+              <h3>Avg Completion</h3>
+            </div>
+            <div class="metric-value" data-value="58">0</div>
+            <div class="metric-trend positive">↗ +5% this month</div>
+          </div>
+
+          <div
+            class="metric-card animate-fade-in"
+            style="animation-delay: 0.3s"
+          >
+            <div class="metric-header">
+              <div class="metric-icon purple">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                  <circle
+                    cx="9"
+                    cy="7"
+                    r="4"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                </svg>
+              </div>
+              <h3>Team Members</h3>
+            </div>
+            <div class="metric-value" data-value="12">0</div>
+            <div class="metric-trend neutral">→ No change</div>
+          </div>
+        </div>
+
+        <!-- Charts Section -->
+        <div class="analytics-charts">
+          <div class="chart-card animate-slide-up">
+            <div class="chart-header">
+              <h3>📈 Project Status Distribution</h3>
+              <div class="chart-controls">
+                <button
+                  class="chart-tab active"
+                  onclick="switchChartTab(this, 'status')"
+                >
+                  Status
+                </button>
+                <button
+                  class="chart-tab"
+                  onclick="switchChartTab(this, 'progress')"
+                >
+                  Progress
+                </button>
+              </div>
+            </div>
+            <div class="chart-content">
+              <div class="status-chart" id="statusChart">
+                <div class="status-row">
+                  <div class="status-indicator active"></div>
+                  <span class="status-label">Active</span>
+                  <div class="status-bar">
+                    <div class="status-fill active" data-width="50"></div>
+                  </div>
+                  <span class="status-count">(3)</span>
+                </div>
+                <div class="status-row">
+                  <div class="status-indicator progress"></div>
+                  <span class="status-label">In Progress</span>
+                  <div class="status-bar">
+                    <div class="status-fill progress" data-width="33"></div>
+                  </div>
+                  <span class="status-count">(2)</span>
+                </div>
+                <div class="status-row">
+                  <div class="status-indicator blocked"></div>
+                  <span class="status-label">Blocked</span>
+                  <div class="status-bar">
+                    <div class="status-fill blocked" data-width="17"></div>
+                  </div>
+                  <span class="status-count">(1)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="chart-card animate-slide-up"
+            style="animation-delay: 0.2s"
+          >
+            <div class="chart-header">
+              <h3>📅 Recent Activity Timeline</h3>
+              <select class="chart-filter">
+                <option>Last 7 Days</option>
+                <option>Last 30 Days</option>
+                <option>Last Quarter</option>
+              </select>
+            </div>
+            <div class="chart-content">
+              <div class="timeline-chart">
+                <div class="timeline-item animate-fade-in">
+                  <div class="timeline-date">Oct 15</div>
+                  <div class="timeline-content">
+                    <div class="timeline-title">
+                      Smart Traffic Control System
+                    </div>
+                    <div class="timeline-progress">
+                      <div class="progress-bar">
+                        <div class="progress-fill" data-width="60"></div>
+                      </div>
+                      <span class="progress-text">60% Complete</span>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="timeline-item animate-fade-in"
+                  style="animation-delay: 0.1s"
+                >
+                  <div class="timeline-date">Oct 13</div>
+                  <div class="timeline-content">
+                    <div class="timeline-title">
+                      City Park Bridge Maintenance
+                    </div>
+                    <div class="timeline-progress">
+                      <div class="progress-bar">
+                        <div class="progress-fill" data-width="82"></div>
+                      </div>
+                      <span class="progress-text">82% Complete</span>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="timeline-item animate-fade-in"
+                  style="animation-delay: 0.2s"
+                >
+                  <div class="timeline-date">Oct 12</div>
+                  <div class="timeline-content">
+                    <div class="timeline-title">
+                      Highway 101 Bridge Replacement
+                    </div>
+                    <div class="timeline-progress">
+                      <div class="progress-bar">
+                        <div class="progress-fill" data-width="71"></div>
+                      </div>
+                      <span class="progress-text">71% Complete</span>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="timeline-item animate-fade-in"
+                  style="animation-delay: 0.3s"
+                >
+                  <div class="timeline-date">Oct 10</div>
+                  <div class="timeline-content">
+                    <div class="timeline-title">
+                      Downtown Traffic Signal Upgrade
+                    </div>
+                    <div class="timeline-progress">
+                      <div class="progress-bar">
+                        <div class="progress-fill" data-width="54"></div>
+                      </div>
+                      <span class="progress-text">54% Complete</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Performance Summary -->
+        <div
+          class="performance-summary animate-slide-up"
+          style="animation-delay: 0.4s"
+        >
+          <h3>🎯 Performance Summary</h3>
+          <div class="summary-grid">
+            <div class="summary-item">
+              <div class="summary-label">Projects On Schedule</div>
+              <div class="summary-value">83%</div>
+              <div class="summary-bar">
+                <div class="summary-fill" data-width="83"></div>
+              </div>
+            </div>
+            <div class="summary-item">
+              <div class="summary-label">Budget Utilization</div>
+              <div class="summary-value">67%</div>
+              <div class="summary-bar">
+                <div class="summary-fill" data-width="67"></div>
+              </div>
+            </div>
+            <div class="summary-item">
+              <div class="summary-label">Team Efficiency</div>
+              <div class="summary-value">92%</div>
+              <div class="summary-bar">
+                <div class="summary-fill" data-width="92"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Team View -->
+    <main
+      id="team-view"
+      class="view-container"
+      style="display: none"
+      role="main"
+    >
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb navigation">
+          <ol class="breadcrumb-list">
+            <li class="breadcrumb-item">
+              <a
+                href="#"
+                class="breadcrumb-link"
+                onclick="switchView('overview')"
+              >
+                <svg
+                  class="breadcrumb-icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                  <polyline
+                    points="9,22 9,12 15,12 15,22"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                </svg>
+                Home
+              </a>
+            </li>
+            <li class="breadcrumb-item">
+              <span class="breadcrumb-current">Team Management</span>
+            </li>
+          </ol>
+        </nav>
+
+        <div class="page-header">
+          <h1 class="page-title">Team Management</h1>
+          <p class="page-description">
+            Manage team members and their project assignments
+          </p>
+          <button class="btn btn-primary" onclick="addTeamMember()">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+              <line
+                x1="12"
+                y1="8"
+                x2="12"
+                y2="16"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+              <line
+                x1="8"
+                y1="12"
+                x2="16"
+                y2="12"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+            </svg>
+            Add Team Member
+          </button>
+        </div>
+
+        <div class="team-grid">
+          <!-- Team Statistics -->
+          <div class="team-stats">
+            <div class="stat-card">
+              <h3>Team Overview</h3>
+              <div class="stat-list">
+                <div class="stat-item">
+                  <span class="stat-label">Total Members</span>
+                  <span class="stat-value">12</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-label">Active Projects</span>
+                  <span class="stat-value">6</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-label">Avg Workload</span>
+                  <span class="stat-value">2.3 projects</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Team Members List -->
+          <div class="team-members">
+            <h3>Team Members</h3>
+            <div class="member-filters">
+              <button class="filter-btn active" data-filter="all">
+                All Members
+              </button>
+              <button class="filter-btn" data-filter="active">Active</button>
+              <button class="filter-btn" data-filter="available">
+                Available
+              </button>
+            </div>
+
+            <div class="members-list" id="membersList">
+              <!-- Team members will be populated by JavaScript -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Settings View -->
+    <main
+      id="settings-view"
+      class="view-container"
+      style="display: none"
+      role="main"
+    >
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb navigation">
+          <ol class="breadcrumb-list">
+            <li class="breadcrumb-item">
+              <a
+                href="#"
+                class="breadcrumb-link"
+                onclick="switchView('overview')"
+              >
+                <svg
+                  class="breadcrumb-icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                  <polyline
+                    points="9,22 9,12 15,12 15,22"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                </svg>
+                Home
+              </a>
+            </li>
+            <li class="breadcrumb-item">
+              <span class="breadcrumb-current">System Settings</span>
+            </li>
+          </ol>
+        </nav>
+
+        <div class="page-header">
+          <h1 class="page-title">System Settings</h1>
+          <p class="page-description">
+            Configure dashboard preferences and system options
+          </p>
+        </div>
+
+        <div class="settings-layout">
+          <div class="settings-sidebar">
+            <nav class="settings-nav">
+              <a
+                href="#"
+                class="settings-nav-item active"
+                data-section="general"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle
+                    cx="12"
+                    cy="12"
+                    r="3"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1 1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                </svg>
+                General
+              </a>
+              <a href="#" class="settings-nav-item" data-section="display">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect
+                    x="2"
+                    y="3"
+                    width="20"
+                    height="14"
+                    rx="2"
+                    ry="2"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                  <line
+                    x1="8"
+                    y1="21"
+                    x2="16"
+                    y2="21"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                  <line
+                    x1="12"
+                    y1="17"
+                    x2="12"
+                    y2="21"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                </svg>
+                Display
+              </a>
+              <a
+                href="#"
+                class="settings-nav-item"
+                data-section="notifications"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M13.73 21a2 2 0 0 1-3.46 0"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                </svg>
+                Notifications
+              </a>
+              <a href="#" class="settings-nav-item" data-section="security">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                </svg>
+                Security
+              </a>
+            </nav>
+          </div>
+
+          <div class="settings-content">
+            <div id="general-settings" class="settings-section active">
+              <h3>General Settings</h3>
+              <div class="setting-group">
+                <label class="setting-label">Dashboard Name</label>
+                <input
+                  type="text"
+                  class="setting-input"
+                  value="CA DOT Dashboard"
+                  placeholder="Enter dashboard name"
+                />
+                <small class="setting-help"
+                  >This name appears in the header and browser title</small
+                >
+              </div>
+
+              <div class="setting-group">
+                <label class="setting-label">Default View</label>
+                <select class="setting-select">
+                  <option value="overview">Project Overview</option>
+                  <option value="analytics">Analytics Dashboard</option>
+                  <option value="team">Team Management</option>
+                </select>
+                <small class="setting-help"
+                  >Choose which view to show when users first load the
+                  dashboard</small
+                >
+              </div>
+
+              <div class="setting-group">
+                <label class="setting-label">Auto-refresh Interval</label>
+                <select class="setting-select">
+                  <option value="0">Never</option>
+                  <option value="30">30 seconds</option>
+                  <option value="60" selected>1 minute</option>
+                  <option value="300">5 minutes</option>
+                  <option value="900">15 minutes</option>
+                </select>
+                <small class="setting-help"
+                  >How often to automatically refresh project data</small
+                >
+              </div>
+            </div>
+
+            <div id="display-settings" class="settings-section">
+              <h3>Display Settings</h3>
+              <div class="setting-group">
+                <label class="setting-label">Theme</label>
+                <div class="setting-radio-group">
+                  <label class="setting-radio">
+                    <input type="radio" name="theme" value="light" checked />
+                    <span>Light</span>
+                  </label>
+                  <label class="setting-radio">
+                    <input type="radio" name="theme" value="dark" />
+                    <span>Dark</span>
+                  </label>
+                  <label class="setting-radio">
+                    <input type="radio" name="theme" value="auto" />
+                    <span>Auto</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="setting-group">
+                <label class="setting-checkbox">
+                  <input type="checkbox" checked />
+                  <span class="checkmark"></span>
+                  Show project progress animations
+                </label>
+              </div>
+
+              <div class="setting-group">
+                <label class="setting-checkbox">
+                  <input type="checkbox" checked />
+                  <span class="checkmark"></span>
+                  Enable smooth scrolling
+                </label>
+              </div>
+
+              <div class="setting-group">
+                <label class="setting-label">Items per page</label>
+                <select class="setting-select">
+                  <option value="10">10 projects</option>
+                  <option value="25" selected>25 projects</option>
+                  <option value="50">50 projects</option>
+                  <option value="100">100 projects</option>
+                </select>
+              </div>
+            </div>
+
+            <div id="notifications-settings" class="settings-section">
+              <h3>Notification Settings</h3>
+              <div class="setting-group">
+                <label class="setting-checkbox">
+                  <input type="checkbox" checked />
+                  <span class="checkmark"></span>
+                  Project status updates
+                </label>
+              </div>
+
+              <div class="setting-group">
+                <label class="setting-checkbox">
+                  <input type="checkbox" checked />
+                  <span class="checkmark"></span>
+                  New project assignments
+                </label>
+              </div>
+
+              <div class="setting-group">
+                <label class="setting-checkbox">
+                  <input type="checkbox" />
+                  <span class="checkmark"></span>
+                  Daily summary emails
+                </label>
+              </div>
+
+              <div class="setting-group">
+                <label class="setting-label">Notification sound</label>
+                <select class="setting-select">
+                  <option value="none">None</option>
+                  <option value="default" selected>Default</option>
+                  <option value="chime">Chime</option>
+                  <option value="bell">Bell</option>
+                </select>
+              </div>
+            </div>
+
+            <div id="security-settings" class="settings-section">
+              <h3>Security Settings</h3>
+              <div class="setting-group">
+                <label class="setting-label">Session timeout</label>
+                <select class="setting-select">
+                  <option value="30">30 minutes</option>
+                  <option value="60" selected>1 hour</option>
+                  <option value="240">4 hours</option>
+                  <option value="480">8 hours</option>
+                </select>
+              </div>
+
+              <div class="setting-group">
+                <label class="setting-checkbox">
+                  <input type="checkbox" checked />
+                  <span class="checkmark"></span>
+                  Require password on sensitive actions
+                </label>
+              </div>
+
+              <div class="setting-group">
+                <label class="setting-checkbox">
+                  <input type="checkbox" />
+                  <span class="checkmark"></span>
+                  Enable two-factor authentication
+                </label>
+              </div>
+
+              <div class="setting-group">
+                <button class="btn btn-secondary">Change Password</button>
+                <button class="btn btn-secondary">Download Activity Log</button>
+              </div>
+            </div>
+
+            <div class="settings-footer">
+              <button class="btn btn-secondary" onclick="resetSettings()">
+                Reset to Defaults
+              </button>
+              <button class="btn btn-primary" onclick="saveSettings()">
+                Save Changes
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Toast Notification Container -->
+    <div id="toastContainer" class="toast-container"></div>
+
+    <!-- Advanced Search Modal -->
+    <div id="advancedSearchModal" class="modal-overlay">
+      <div
+        class="modal advanced-search-modal"
+        role="dialog"
+        aria-labelledby="advancedSearchTitle"
+      >
+        <div class="modal-header">
+          <h2 id="advancedSearchTitle" class="modal-title">
+            Advanced Search & Filters
+          </h2>
+          <button
+            class="modal-close"
+            onclick="closeAdvancedSearch()"
+            aria-label="Close advanced search"
+          >
+            ×
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="search-tabs">
+            <button class="search-tab active" data-tab="search">Search</button>
+            <button class="search-tab" data-tab="filters">Filters</button>
+            <button class="search-tab" data-tab="history">History</button>
+          </div>
+
+          <div class="search-tab-content" id="searchTab">
+            <div class="search-field-group">
+              <label for="advancedSearchText">Search Text</label>
+              <input
+                type="text"
+                id="advancedSearchText"
+                placeholder="Search in project names, descriptions, or status..."
+              />
+            </div>
+
+            <div class="search-field-group">
+              <label for="searchInFields">Search In</label>
+              <div id="searchInFields" class="checkbox-group">
+                <label><input type="checkbox" checked /> Project Names</label>
+                <label><input type="checkbox" checked /> Descriptions</label>
+                <label><input type="checkbox" /> Team Members</label>
+                <label><input type="checkbox" /> Status</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="search-tab-content" id="filtersTab" style="display: none">
+            <div class="search-field-group">
+              <label for="dateRange">Date Range</label>
+              <div class="date-range-inputs">
+                <input type="date" id="dateFrom" placeholder="From" />
+                <input type="date" id="dateTo" placeholder="To" />
+              </div>
+            </div>
+
+            <div class="search-field-group">
+              <label for="taskProgress">Task Progress</label>
+              <div class="range-input-group">
+                <input
+                  type="range"
+                  id="taskProgressMin"
+                  min="0"
+                  max="100"
+                  value="0"
+                />
+                <input
+                  type="range"
+                  id="taskProgressMax"
+                  min="0"
+                  max="100"
+                  value="100"
+                />
+                <div class="range-labels">
+                  <span id="progressMinLabel">0%</span>
+                  <span id="progressMaxLabel">100%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="search-tab-content" id="historyTab" style="display: none">
+            <div class="filter-history">
+              <h4>Recent Searches</h4>
+              <div id="recentSearches" class="history-list">
+                <!-- Populated by JavaScript -->
+              </div>
+
+              <h4>Saved Filters</h4>
+              <div id="savedFilters" class="history-list">
+                <!-- Populated by JavaScript -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" onclick="clearAdvancedSearch()">
+            Clear All
+          </button>
+          <button class="btn btn-secondary" onclick="saveCurrentFilter()">
+            Save Filter
+          </button>
+          <button class="btn btn-primary" onclick="applyAdvancedSearch()">
+            Apply Search
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Container -->
+    <div id="modalOverlay" class="modal-overlay">
+      <div
+        class="modal"
+        role="dialog"
+        aria-labelledby="modalTitle"
+        aria-describedby="modalBody"
+      >
+        <div class="modal-header">
+          <h2 id="modalTitle" class="modal-title">Modal Title</h2>
+          <button
+            class="modal-close"
+            onclick="closeModal()"
+            aria-label="Close modal"
+          >
+            ×
+          </button>
+        </div>
+        <div id="modalBody" class="modal-body">Modal content goes here</div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" onclick="closeModal()">
+            Cancel
+          </button>
+          <button class="btn btn-primary" onclick="confirmModal()">
+            Confirm
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Projects JSON from FileMaker (place your JSON array here) -->
+    <script id="data" type="application/json">
+      [
+        {
+          "id": 1,
+          "name": "Highway 101 Bridge Replacement",
+          "status": "Active",
+          "total": 45,
+          "done": 32,
+          "updated": "Oct 12, 2025",
+          "description": "Complete replacement of the aging bridge structure on Highway 101 with modern seismic-resistant design. Includes environmental impact assessment and traffic management during construction.",
+          "team": ["Sarah Chen", "Mike Rodriguez", "Jennifer Kim"]
+        },
+        {
+          "id": 2,
+          "name": "Downtown Traffic Signal Upgrade",
+          "status": "In Progress",
+          "total": 28,
+          "done": 15,
+          "updated": "Oct 10, 2025",
+          "description": "Modernization of 12 traffic signals in the downtown corridor with smart traffic management systems, pedestrian countdown timers, and ADA-compliant crossing signals.",
+          "team": ["David Park", "Lisa Thompson", "Carlos Martinez"]
+        },
+        {
+          "id": 3,
+          "name": "Regional Transit Center Expansion",
+          "status": "Blocked",
+          "total": 67,
+          "done": 23,
+          "updated": "Oct 8, 2025",
+          "description": "Expansion of the regional transit center to accommodate increased ridership and new bus rapid transit lines. Currently blocked pending environmental review approval.",
+          "team": ["Jennifer Kim", "Sarah Chen", "Tom Anderson"]
+        },
+        {
+          "id": 4,
+          "name": "City Park Bridge Maintenance",
+          "status": "Active",
+          "total": 22,
+          "done": 18,
+          "updated": "Oct 13, 2025",
+          "description": "Routine maintenance and safety improvements for the pedestrian bridge at City Park. Includes deck resurfacing, railing repairs, and lighting upgrades.",
+          "team": ["Mike Rodriguez", "Emily Davis", "Mark Wilson"]
+        },
+        {
+          "id": 5,
+          "name": "Highway 280 Sound Barriers",
+          "status": "On Hold",
+          "total": 38,
+          "done": 12,
+          "updated": "Oct 6, 2025",
+          "description": "Installation of sound barrier walls along 3 miles of Highway 280 to reduce noise impact on residential areas. Project on hold due to community input review process.",
+          "team": ["Lisa Thompson", "Tom Anderson", "Sarah Chen"]
+        },
+        {
+          "id": 6,
+          "name": "Smart Traffic Control System",
+          "status": "In Progress",
+          "total": 45,
+          "done": 27,
+          "updated": "Oct 14, 2025",
+          "description": "Implementation of AI-powered traffic control system across 15 intersections in the downtown core. Real-time traffic optimization and emergency vehicle priority.",
+          "team": ["David Park", "Carlos Martinez", "Jennifer Kim"]
+        }
+      ]
+    </script>
+
+    <script src="script.js"></script>
+  </body>
+</html>
